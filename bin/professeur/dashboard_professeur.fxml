@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="professeur.professeurController">
+	<left>
+		<fx:include source="partie_left.fxml" />
+	</left>
+	<center>
+		<AnchorPane prefHeight="600.0" prefWidth="785.0"
+			style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+			<children>
+				<Text fill="#0074c1" layoutX="63.0" layoutY="72.0"
+					strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="41.0" />
+					</font>
+				</Text>
+				<Text fx:id="lab_varier" layoutX="295.0" layoutY="71.0"
+					strokeType="OUTSIDE" strokeWidth="0.0" text="BienvEl bachirenue">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="37.0" />
+					</font>
+				</Text>
+				<Separator layoutX="63.0" layoutY="81.0" prefHeight="5.0"
+					prefWidth="658.0">
+					<effect>
+						<InnerShadow height="79.49" radius="45.0925"
+							width="102.88">
+							<color>
+								<Color green="0.7065991163253784" blue="1.0" />
+							</color>
+						</InnerShadow>
+					</effect>
+				</Separator>
+				<Text layoutX="86.0" layoutY="161.0" strokeType="OUTSIDE"
+					strokeWidth="0.0"
+					text="Application de gestion des notes (Professeur)"
+					wrappingWidth="441.5999755859375">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="26.0" />
+					</font>
+				</Text>
+			</children>
+		</AnchorPane>
+	</center>
+	<bottom>
+		<fx:include source="bottom.fxml" />
+	</bottom>
+
+
+</BorderPane>

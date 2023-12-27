@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="professeur.professeurController">
+	<left>
+		<fx:include source="../partie_left.fxml" />
+	</left>
+	<center>
+		<AnchorPane prefHeight="600.0" prefWidth="785.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+			<children>
+				<Text layoutX="46.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" module" wrappingWidth="140.81942127414572">
+					<font>
+						<Font name="Berlin Sans FB" size="18.0" />
+					</font>
+				</Text>
+				<Separator layoutX="5.0" layoutY="124.0" prefHeight="6.0" prefWidth="813.0">
+					<effect>
+						<InnerShadow height="79.49" radius="45.0925" width="102.88">
+							<color>
+								<Color green="0.7065991163253784" blue="1.0" />
+							</color>
+						</InnerShadow>
+					</effect>
+				</Separator>
+				<ImageView fitHeight="43.0" fitWidth="129.0" layoutX="19.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../image/Group%201.png" />
+					</image>
+				</ImageView>
+				<Hyperlink fx:id="ajouter" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="1.0" layoutY="70.0" onAction="#toAjoutModule" prefHeight="30.0" prefWidth="163.0" style="-fx-underline: false;" text="Ajouter" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="18.0" />
+					</font>
+				</Hyperlink>
+            <TableView fx:id="tableModule" layoutX="46.0" layoutY="130.0" prefHeight="432.0" prefWidth="622.0">
+              <columns>
+                <TableColumn fx:id="ColonneNom" prefWidth="116.00006103515625" text="Nom" />
+                <TableColumn fx:id="colonneId" prefWidth="136.00006103515625" text="Id_module" />
+                  <TableColumn fx:id="colonneSemistre" prefWidth="125.5999755859375" text="Semistre" />
+                  <TableColumn fx:id="update" prefWidth="121.59994506835938" text="Update" />
+                  <TableColumn fx:id="delete" prefWidth="120.800048828125" text="Delete" />
+              </columns>
+            </TableView>
+			</children>
+		</AnchorPane>
+	</center>
+	<bottom>
+		<fx:include source="../bottom.fxml" />
+	</bottom>
+
+</BorderPane>
